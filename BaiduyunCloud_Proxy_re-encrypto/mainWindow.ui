@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainForm</class>
+ <widget class="QWidget" name="MainForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>基于区块链的云存储模块</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>320</y>
+     <width>231</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="buttonLayout">
+    <item>
+     <widget class="QPushButton" name="upload">
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="toolTip">
+       <string>选择个人信息文件以便于上传</string>
+      </property>
+      <property name="text">
+       <string>Upload file</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="download">
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="toolTip">
+       <string>下载个人信息文件</string>
+      </property>
+      <property name="text">
+       <string>Download file</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>320</y>
+     <width>231</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="buttonLayout_2">
+    <item>
+     <widget class="QPushButton" name="showF">
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="toolTip">
+       <string>展示云端个人信息文件</string>
+      </property>
+      <property name="text">
+       <string>Show file</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="compareF">
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="toolTip">
+       <string>比较个人信息文件</string>
+      </property>
+      <property name="text">
+       <string>Comepare file</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="showLabel">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>40</y>
+     <width>401</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>提示显示区</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>download</sender>
+   <signal>clicked()</signal>
+   <receiver>MainForm</receiver>
+   <slot>downloadFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>431</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>537</x>
+     <y>452</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upload</sender>
+   <signal>clicked()</signal>
+   <receiver>MainForm</receiver>
+   <slot>uploadFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>437</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>467</x>
+     <y>289</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>compareF</sender>
+   <signal>clicked()</signal>
+   <receiver>MainForm</receiver>
+   <slot>compareFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>434</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>263</x>
+     <y>452</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>showF</sender>
+   <signal>clicked()</signal>
+   <receiver>MainForm</receiver>
+   <slot>showFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>214</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>152</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>showFile()</slot>
+  <slot>compareFile()</slot>
+  <slot>uploadFile()</slot>
+  <slot>downloadFile()</slot>
+ </slots>
+</ui>
